@@ -1,0 +1,64 @@
+<div class="container">
+
+    <div class="row p-3 mt-3 mb-3 bg-light">
+
+        <div class="col-md-12 text-center">
+            <h3 class="text-center">Product Hunt API</h3>
+        </div>
+
+    </div>
+
+
+    <!-- datePicker -->
+    <p>
+        Entrez une date puis cliquez sur show pour afficher les produits parus à cette date.
+    </p>
+    <div class="row mt-3 mb-3">
+        <div class="col-sm-4"></div>
+
+        <div class="col-sm-3">
+            <input type="date" [(ngModel)]="date" id="start" name="trip-start" value="2018-07-22" [max]="transformDate()">
+        </div>
+
+        <div>
+            <button (click)="show()" class="btn btn-primary btn-sm px-4 rounded-pill text-uppercase font-weight-bold shadow-sm">show</button>
+        </div>
+    </div>
+
+
+    <!-- Pie chart -->
+
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div>
+            <p *ngIf="products !== undefined">nombre de produits par catégorie : </p>
+            <canvas id="myChart" width="900" height="550"></canvas>
+        </div>
+    </div>
+
+    <div class="row mb-2 mt-2">
+        <h4 *ngIf="products !== undefined"> <b>{{products.length}}</b> produits</h4>
+    </div>
+    <!-- Products -->
+    <div class="row p-3">
+
+        <div class="col-md-4" *ngFor="let product of products" style="height: 340px;">
+            <div class="p-2 border bg-light">
+                <h3 class="text-center">{{product.name}}</h3>
+                <p>{{product.tagline}}</p>
+                <div class="text-center">
+                    <img src="{{product.thumbnail.image_url}}" alt="" height="100px" width="100px">
+                </div>
+                <span class="badge">Created at {{product.created_at | date:'h:mm:ss'}}</span>
+                <div class="pull-right">
+                    <span class="badge badge-pill badge-primary" *ngFor="let topic of product.topics">
+                      {{topic.slug}}
+                  </span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
