@@ -1,1 +1,12 @@
-malou app
+Le projet à été généré avec Angular CLI version 8.3.18
+
+
+* Après le téléchargement du projet les modules suivants devrons êtres ajoutés (nodes_modules dans .gitignore) 
+
+ bootstrap : npm install bootstrap
+ chart.js : npm install chart.js 
+ jquery : npm install jquery
+ popper.js : npm install popper.js
+
+* Executer la commande 'ng serve' puis se rendre à l'adresse http://localhost:4200/ 
+
