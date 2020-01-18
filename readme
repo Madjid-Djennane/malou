@@ -1,12 +1,13 @@
+*prérequis*
 Le projet à été généré avec Angular CLI version 8.3.18
 
 
-* Après le téléchargement du projet les modules suivants devrons êtres ajoutés (nodes_modules dans .gitignore) 
 
- bootstrap : npm install bootstrap
- chart.js : npm install chart.js 
- jquery : npm install jquery
- popper.js : npm install popper.js
+Suivre les étapes suivante afin de lancer l'application
 
-* Executer la commande 'ng serve' puis se rendre à l'adresse http://localhost:4200/ 
+1 - Télécharger le projet 
+2 - Le dézipper
+3 - Taper la commande 'npm install' à la racine du projet (dans un terminal)
+4 - Taper la commande 'ng serve' à la racine du projet puis se rendre à l'adresse http://localhost:4200/  
+ 
 
